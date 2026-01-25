@@ -1,0 +1,180 @@
+/*palette de couleur pour le light mode
+--sapphire-sky: #2a6fdbff; pas utilisé
+--turquoise: #44e5c2ff; couleur d'accentuation
+--platinum: #f7f9fcff; main background color
+--alice-blue: #e9edf5ff; second background color
+--jet-black: #1f2a36ff; accent text
+--blue-slate: #4f5b66ff; main text
+*/
+
+/* palette de couleur pour le dark mode
+--ink-black: #0f1724ff; main backrground color
+--jet-black: #1c2534ff; second background color
+--alice-blue: #e6ecf3ff; accent text
+--powder-blue: #a6b2c3ff; main text
+--dodger-blue: #4d9bffff; pas utilisé
+--turquoise: #36dcc6ff; couleur d'accentuation
+*/
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    position: static ;
+    height: 10%;
+    width: 100vw;
+}
+
+main {
+    .infos {
+        position: fixed;
+        margin-left: 5%;
+        margin-right: 51%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        
+        h1 {
+            font-size: 3em;
+        }
+        h2 {
+            color: var(--accent-text-color);
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+
+        .side-menu {
+            position: static;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .side-menu li {
+            margin: 20px 0;
+        }
+
+        .side-menu a {
+            position: relative;
+            text-decoration: none;
+            color: #8892b0;
+            font-size: 15px;
+            display: inline-block;
+            padding-left: 35px; /* espace pour la ligne */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* Ligne visible même sans survol */
+        .side-menu a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 20px; /* longueur par défaut (toujours visible) */
+            height: 1px;
+            background-color: #8892b0;
+            transform: translateY(-50%);
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Au survol : texte déplacé + ligne plus longue + couleur */
+        .side-menu a:hover {
+            transform: translateX(10px);
+            color: #64ffda;
+        }
+
+        .side-menu a:hover::before {
+            width: 40px; /* longueur étendue */
+            background-color: #64ffda;
+        }
+    }
+    .contenu {
+        width: 45%;
+    }    
+}
+
+
+
+
+/*! Light et dark mode */
+/* Mode clair par défaut */
+:root {
+    --main-bg-color: #f7f9fcff;
+    --second-bg-color: #e9edf5ff;
+    --main-text-color: #4f5b66ff;
+    --accent-text-color: #1f2a36ff;
+    --accentuate-color: #44e5c2ff;
+}
+
+/* Mode sombre */
+.dark-mode {
+    --main-bg-color: #0f1724ff;
+    --second-bg-color: #1c2534ff;
+    --main-text-color: #a6b2c3ff;
+    --accent-text-color: #e6ecf3ff;
+    --accentuate-color: #36dcc6ff;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: Arial, sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Toggle Switch */
+.toggle-container {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    display: none;
+}
+
+/* apparence du toggle switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 25px;
+    transition: 0.4s;
+    background-color: var(--accent-text-color);
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: var(--accentuate-color);
+}
+
+input:checked + .slider::before {
+    transform: translateX(25px);
+}
