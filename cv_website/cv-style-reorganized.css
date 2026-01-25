@@ -12,7 +12,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    body.theme--dark {
+    .theme--dark {
         --gradient-bg-color: linear-gradient(rgb(14, 30, 55) 0%, rgba(15, 23, 36, 1) 35%, rgba(15, 23, 36, 1) 65%, rgb(14, 30, 55) 100%);
         --main-bg-color: rgba(15, 23, 36, 1);
         --second-bg-color: #1c2534ff;
@@ -24,7 +24,7 @@
     }
 }
 
-body.theme--dark {
+.theme--dark {
     --gradient-bg-color: linear-gradient(rgb(14, 30, 55) 0%, rgba(15, 23, 36, 1) 35%, rgba(15, 23, 36, 1) 65%, rgb(14, 30, 55) 100%);
     --main-bg-color: rgba(15, 23, 36, 1);
     --second-bg-color: #1c2534ff;
