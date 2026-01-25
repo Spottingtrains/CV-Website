@@ -223,6 +223,12 @@ svg {
     display: flex;
     padding: 1rem 0;
     transition: all .3s ease-in;
+    border-bottom: 1px solid var(--second-bg-color);
+    border-radius: 5px;
+}
+
+.contenu li:last-child {
+    border: none;
 }
 
 .contenu ul li:hover {
@@ -238,7 +244,6 @@ svg {
 
 /** ===== SECTIONS : EXPÉRIENCE, FORMATION, PROJETS ===== */
 /*TODO: régler les transitions pour le hover (partie à droite) */
-/*TODO: régler la taille de la div formation en responsive */
 
 .experience,
 .formation,
@@ -449,8 +454,6 @@ svg {
 
 /** ===== RESPONSIVE DESIGN ===== */
 
-/*TODO: régler le problème du darkmode switch en responsive */
-
 @media screen and (max-width: 1100px) {
 
     header {
@@ -484,6 +487,10 @@ svg {
         margin: 0;
         gap: 4rem;
         align-items: center;
+    }
+
+    .formation {
+        margin: 0;
     }
 
     .dark-mode-toggle {
