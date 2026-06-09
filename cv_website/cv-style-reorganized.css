@@ -1,38 +1,25 @@
 /** ===== VARIABLES & THÈME ===== */
 
 :root {
-    --gradient-bg-color: linear-gradient(hsl(220, 40%, 96%) 0%, hsl(220, 45%, 93%) 35%, hsl(220, 45%, 93%) 65%, hsl(220, 40%, 96%) 100%);
-    --main-bg-color: hsl(220, 50%, 97%);
-    --second-bg-color: hsl(220, 40%, 92%);
-    --main-text-color: hsl(215, 15%, 35%);
-    --accent-text-color: hsl(212, 25%, 20%);
-    --accentuate-color: hsl(172, 70%, 54%);
-    --tags-background-color: hsla(205, 55%, 13%, 0.85);
-    --shadow-color: hsl(217, 10%, 85%);
-}
-
-@media (prefers-color-scheme: dark) {
-    .theme--dark {
-        --gradient-bg-color: linear-gradient(rgb(14, 30, 55) 0%, rgba(15, 23, 36, 1) 35%, rgba(15, 23, 36, 1) 65%, rgb(14, 30, 55) 100%);
-        --main-bg-color: rgba(15, 23, 36, 1);
-        --second-bg-color: #1c2534ff;
-        --main-text-color: hsl(215, 19%, 80%);
-        --accent-text-color: hsl(212, 35%, 93%);
-        --accentuate-color: hsl(172, 70%, 54%);
-        --tags-background-color: #0F2433;
-        --shadow-color: hsl(217, 41%, 8%);
-    }
+    --gradient-bg-color: linear-gradient(345deg,hsl(195, 15%, 97%) 0%, hsl(195, 18%, 91%) 25%, hsl(195, 18%, 91%) 75%, hsl(195, 15%, 97%) 100%);
+    --main-bg-color: hsl(195, 15%, 97%);
+    --second-bg-color: hsl(195, 18%, 91%);
+    --main-text-color: hsl(200, 12%, 38%);
+    --accent-text-color: hsl(200, 38%, 18%);
+    --accentuate-color: #EC785B;
+    --tags-background-color: #F0967F;
+    --shadow-color: hsl(195, 18%, 84%);
 }
 
 .theme--dark {
-    --gradient-bg-color: linear-gradient(rgb(14, 30, 55) 0%, rgba(15, 23, 36, 1) 35%, rgba(15, 23, 36, 1) 65%, rgb(14, 30, 55) 100%);
-    --main-bg-color: rgba(15, 23, 36, 1);
-    --second-bg-color: #1c2534ff;
-    --main-text-color: hsl(215, 19%, 80%);
-    --accent-text-color: hsl(212, 35%, 93%);
-    --accentuate-color: hsl(172, 70%, 54%);
-    --tags-background-color: #0F2433;
-    --shadow-color: hsl(217, 41%, 8%);
+    --gradient-bg-color: linear-gradient(345deg,rgba(26, 46, 54, 1) 0%, rgba(14, 30, 36, 1) 25%, rgba(14, 30, 36, 1) 75%, rgba(26, 46, 54, 1) 100%);
+    --main-bg-color: #0e1e24;
+    --second-bg-color: #30464E;
+    --main-text-color: hsl(195, 15%, 72%);
+    --accent-text-color: #F5F0EE;
+    --accentuate-color: #EC785B;
+    --tags-background-color: #F0967F;
+    --shadow-color: hsl(200, 30%, 6%);
 }
 
 /** ===== STYLES GLOBAUX ===== */
@@ -54,7 +41,7 @@ body {
 
 strong {
     color: var(--accent-text-color);
-    font-weight: bolder;
+    font-variation-settings: "wght" 600;
 }
 
 
@@ -93,6 +80,13 @@ main {
     font-size: 3em;
     line-height: 1;
     margin: 0;
+    color: var(--accent-text-color);
+    transition: all .2s ease-in;
+}
+
+.infos h1:hover {
+    color: var(--accentuate-color);
+    transition: all .2s ease-in;
 }
 
 .infos h2 {
@@ -104,6 +98,7 @@ main {
 .infos h3 {
     font-size: 1em;
     margin-bottom: 0;
+    color: var(--accentuate-color);
 }
 
 .infos a {
@@ -128,7 +123,7 @@ main {
 }
 
 .infos a:hover svg {
-    fill: var(--accent-text-color);
+    fill: var(--accentuate-color);
 }
 
 
@@ -140,7 +135,7 @@ main {
     padding-left: 35px;
     font-size: 1em;
     color: var(--main-text-color);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .side-menu a::before {
@@ -152,23 +147,25 @@ main {
     height: 2px;
     background-color: var(--main-text-color);
     transform: translateY(-50%);
-    transition: all .3s ease-in;
+    transition: all .2s ease-in;
     border-radius: 1px;
 }
 
 .side-menu a:hover {
     transform: translateX(10px);
     padding-left: 55px;
-    color: var(--accent-text-color);
+    color: var(--accentuate-color);
+    transition: all .2s ease-in;
 }
 
 .side-menu a:hover::before {
     width: 40px;
-    background-color: var(--accent-text-color);
+    background-color: var(--accentuate-color);
 }
 
 .side-menu a:hover svg {
     fill: var(--accentuate-color);
+    transition: all .2s ease-in;
 }
 
 .side-menu li {
@@ -243,7 +240,6 @@ svg {
 
 
 /** ===== SECTIONS : EXPÉRIENCE, FORMATION, PROJETS ===== */
-/*TODO: régler les transitions pour le hover (partie à droite) */
 
 .experience,
 .formation,
@@ -372,9 +368,11 @@ svg {
     font-size: 0.8em;
     padding: 3px 6px;
     border-radius: 1em;
-    border: 1px solid var(--tags-background-color);
+    border: 1px solid var(--accentuate-color);
     background-color: var(--tags-background-color);
-    color: var(--accentuate-color);
+    color: var(--main-bg-color);
+    font-variation-settings: "wght" 600;
+    opacity: 0.8;
 }
 
 
@@ -494,6 +492,6 @@ svg {
     }
 
     .dark-mode-toggle {
-    position: relative;
-}
+        position: relative;
+    }
 }
