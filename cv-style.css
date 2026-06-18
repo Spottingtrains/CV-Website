@@ -2,10 +2,10 @@
 
 :root {
     --gradient-bg-color: linear-gradient(345deg,hsl(195, 15%, 97%) 0%, hsl(195, 18%, 91%) 25%, hsl(195, 18%, 91%) 75%, hsl(195, 15%, 97%) 100%);
-    --main-bg-color: hsl(195, 15%, 97%);
+    --main-bg-color: rgb(246, 248, 248);
     --second-bg-color: hsl(195, 18%, 91%);
     --main-text-color: hsl(200, 12%, 38%);
-    --accent-text-color: hsl(200, 38%, 18%);
+    --accent-text-color: rgb(28, 52, 63);
     --accentuate-color: #EC785B;
     --tags-background-color: #F0967F;
     --shadow-color: hsl(195, 18%, 84%);
