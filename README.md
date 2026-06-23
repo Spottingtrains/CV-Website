@@ -14,7 +14,7 @@ Site web personnel conçu pour présenter mon curriculum vitae et mes projets à
 
 Le site a été pensé comme un prolongement numérique de mon CV papier : une interface claire, sobre et cohérente visuellement, qui reflète à la fois mon parcours en communication et ma montée en compétences en développement web.
 
-La maquette a d'abord été esquissée sur **Figma**, puis développée de manière itérative — en faisant mes propres recherches, essais et observations au fil de la formation.
+La maquette a d'abord été esquissée sur **Figma**, puis développée de manière itérative — en faisant mes propres recherches, essais et observations au fil du développement.
 
 ## Technologies utilisées
 
